@@ -6,12 +6,12 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #cbedea;
+    background-color: #e9fefd;
     color: #292524
 }
 
 header {
-    background-color: #632b35;
+    background-color: #eaaeb9;
     color: white;
     padding: 40px 20px;
     text-align: center;
@@ -51,12 +51,12 @@ section {
 }
 
 h2{
-    color: #632b35;
+    color: #ff728c;
     font-size: 28px;
 }
 
 #greeting {
-    color: #632b35;
+    color: #fd5070;
     font-weight: bold;
 }
 
@@ -120,7 +120,7 @@ textarea {
 
 button {
     padding: 12px 22px;
-    background-color: #632b35;
+    background-color: #eaaeb9;
     color: white;
     border: none;
     border-radius: 5px;
@@ -139,7 +139,7 @@ button:hover {
 footer {
     margin-top: 40px;
     padding: 20px;
-    background-color: #632b35;
+    background-color: #eaaeb9;
     color: white;
     text-align: center;
 }
