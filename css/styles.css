@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #cbedea;
+    color: #292524
+}
+
+header {
+    background-color: #632b35;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin:0 auto;
+}
+
+section {
+    padding: 35px 0;
+}
+
+h2{
+    color: #632b35;
+    font-size: 28px;
+}
+
+#greeting {
+    color: #632b35;
+    font-weight: bold;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.project {
+    flex: 1 1 300px;
+    min-width: 0;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #d7ccc8;
+    border-radius: 10px;
+}
+
+.project img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background-color: #f1ebe7;
+    border-radius: 6px;
+}
+
+.project h3 {
+    color: #632b35;
+}
+
+form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid #8b7e79;
+    border-radius: 5px;
+    background-color: white;
+    color: #292524;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px 22px;
+    background-color: #632b35;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8b7e79;
+}
+
+#form-feedback {
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #632b35;
+    color: white;
+    text-align: center;
+}

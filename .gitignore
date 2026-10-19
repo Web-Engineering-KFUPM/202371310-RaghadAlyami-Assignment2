@@ -1,0 +1,11 @@
+#operating system files
+.DS_Store
+Thumbs.db
+
+#Local editor settings
+.vscode/
+
+#Dependicies and private environment files
+node_modules/
+.env
+.env.*

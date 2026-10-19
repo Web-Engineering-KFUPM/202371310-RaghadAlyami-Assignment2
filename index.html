@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghad Alyami | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Raghad Alyami</h1>
+        <p>Computer Science student exploring software and web development.</p>
+
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>    
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+
+            <p id="greeting">Hello, I'm Raghad!</p>
+
+            <p>
+                I'm a passionate Computer Science student with a strong interest in web development and software engineering.
+                I enjoy creating innovative solutions and learning new technologies to enhance my skills.
+            </p>
+            </section>
+
+            <section id="projects">
+                <h2>My Projects</h2>
+
+                <div class="project-container">
+                    <div class="project">
+                        <img src="assets/images/Wasm.jpeg"
+                        alt="Wasm interface presentation and project poster">
+                        
+                        <h3>Wasm [Creative Services App]</h3>
+                        <p>
+                            A mobile application project designed to connect small business owners with creative professionals.
+                            It helps business owners find professionals for their branding and creative needs, while allowing
+                            professionals to showcase their work and services.
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <img src="assets/images/pedestrian-light.jpeg"
+                         alt="FPGA board used for a pedestrian light project">
+
+                        <h3>FPGA Pedestrian Light</h3>
+                        <p>
+                            A simple pedestrian light project implemented on an FPGA board to simulate 
+                            pedestrian crossing signals. The project applied digital logic concepts to a practical hardware application.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <p>This is a demonstration form. Messages are not sent.</p>
+
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+
+                    <p id="form-feedback" role="status"></p>
+                </form>
+            </section>
+    </main>
+    
+     <footer>
+        <p>&copy; 2026 Raghad Alyami.</p>
+     </footer>
+     
+     <script src="js/script.js"></script>
+
+</body>
+</html>
