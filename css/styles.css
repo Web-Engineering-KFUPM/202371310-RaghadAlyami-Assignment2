@@ -2,10 +2,13 @@
     --card: white;
     --muted: #57534e;
     --border: #d7ccc8;
-    --accent: #632b35;
+    --accent: #f96983;
     --accent-soft: #f1ebe7;
     --radius: 10px;
     --speed: 0.35s;
+    --text: #292524;
+    --error: #b3261e;
+    --error-soft: #fdecea;
 }
 
 * {
@@ -245,6 +248,177 @@ h2{
 
     .project:hover {
         transform: none;
+    }
+}
+
+/* ---------- Quote of the Moment (public API) ---------- */
+.quote-section {
+    max-width: 760px;
+}
+
+.quote-intro {
+    margin: 0 0 20px;
+    color: var(--muted);
+}
+
+.quote-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 28px 24px;
+    min-height: 190px; /* keeps the card from jumping between states */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Quote content */
+.quote-content {
+    margin: 0;
+}
+
+.quote-text {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.quote-text::before {
+    content: "\201C";
+    color: var(--accent);
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.quote-text::after {
+    content: "\201D";
+    color: var(--accent);
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+.quote-author {
+    display: block;
+    margin-top: 12px;
+    color: var(--muted);
+    font-style: normal;
+    font-weight: bold;
+}
+
+.quote-author::before {
+    content: "— ";
+}
+
+/* Fade-in when a new quote arrives */
+.fade-in {
+    animation: fadeIn 0.5s ease both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading state */
+.quote-loading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+}
+
+.spinner {
+    width: 22px;
+    height: 22px;
+    border: 3px solid var(--accent-soft);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error state */
+.quote-error {
+    background-color: var(--error-soft);
+    color: var(--error);
+    border-left: 4px solid var(--error);
+    padding: 12px 14px;
+    border-radius: 0 6px 6px 0;
+}
+
+.quote-error strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.quote-error p {
+    margin: 0;
+    color: var(--text);
+}
+
+/* Button */
+.quote-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.1s ease, opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e56984;
+}
+
+.btn-primary:active {
+    transform: scale(0.97);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.quote-source {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.quote-source a {
+    color: var(--accent);
+}
+
+/* Use the [hidden] attribute to show/hide states */
+[hidden] {
+    display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade-in,
+    .spinner {
+        animation: none;
+    }
+
+    .btn-primary {
+        transition: none;
     }
 }
 
